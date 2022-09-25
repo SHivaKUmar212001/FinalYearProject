@@ -59,9 +59,9 @@ public class ClientOneway : MonoBehaviour
         receiver = new ReceiverOneway();
         receiver.Start((Data d) => runOnMainThread.Enqueue(() =>
             {
-                Debug.Log(d.str);
+                //Debug.Log(d.str);
                 string[] stringPos = d.str.Split(',');
-                Player.Instance.playerCoordinates = new Vector2(int.Parse(stringPos[1]), int.Parse(stringPos[0]));
+                Player.Instance.playerCoordinates = new Vector2(int.Parse(stringPos[0]), int.Parse(stringPos[1]));
                 tex.LoadImage(d.image);
             }
         ));

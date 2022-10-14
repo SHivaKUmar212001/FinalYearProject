@@ -3,8 +3,7 @@
 [Serializable]
 public struct Data
 {
-    public bool bool_;
-    public int int_;
-    public string str;
+    public string leftWrist, rightWrist;
+    public float ratio;
     public byte[] image;
 }

@@ -59,8 +59,7 @@ public class Client : MonoBehaviour
         ForceDotNet.Force();  // If you have multiple sockets in the following threads
         receiver = new Receiver();
         receiver.Start((Data d) => runOnMainThread.Enqueue(() =>
-            {
-                Debug.Log(d.str);
+            {         
                 tex.LoadImage(d.image);
             }
         ));
